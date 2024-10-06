@@ -9,7 +9,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #0a0a0a;
     color: #00FF41;
-    cursor: url('sym46.cur'), auto;
+    cursor: url('cursor.cur'), auto;
 }
 header {
     position: fixed;
