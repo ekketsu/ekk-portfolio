@@ -405,7 +405,7 @@ body.art #linkedin:hover {
 @media (max-width: 429px) {
     .intro h1 {
         white-space: wrap;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 @media (min-width: 430px) and (max-width: 659px) {
