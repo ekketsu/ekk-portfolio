@@ -1,0 +1,441 @@
+/* Styles généraux */
+
+.intro h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #00FF41;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    border-right: 4px solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out 4s forwards;
+    opacity: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #00FF41;
+    border: 2px solid #00FF41;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #00FF41;
+    color: #0a0a0a;
+    text-decoration: underline;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #00FF41; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.projects {
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 300px;
+    border: 2px solid #00FF41;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #0a0a0a;
+    transition: transform 0.3s;
+}
+
+.project-item img {
+    width: 100%;
+    border-bottom: 2px solid #00FF41;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    border-color: #ff0000;
+}
+.project-item:hover img {
+    border-bottom: 2px solid #ff0000;
+}
+.project-item:hover a{
+    color: #ff0000;
+}
+.project-item:hover ::-webkit-scrollbar-thumb{
+    background-color: #ff0000;
+}
+.project-item:hover ::-webkit-scrollbar-thumb:hover{
+    background-color: #fe5656;
+    border-width: 3px;
+    border-radius:3px;
+}
+.project-item a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #00FF41;
+}
+
+.project-item #art-project:hover {
+    background-image: url(images/mutlicolor.gif);
+    background-clip: text;
+    transition: color 0.5s;
+    color:transparent;
+}
+
+.project-item h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.project-item .scroll {
+    overflow-y: scroll;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+
+.scroll::-webkit-scrollbar {
+    width: 15px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #0f0; 
+    border-radius: 0px;
+    border: 4px solid #111;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #79f279;
+}
+
+.project-item p {
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0 15px 15px 15px;
+    color: #ccc;
+    text-align: left;
+}
+
+.contact {
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+    height: 7rem;
+    width: 7rem;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid #00FF41;
+    border-radius: 25%;
+    transition: transform 0.3s;
+}
+
+#insta {
+    background-image: url('images/insta.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#insta:hover {
+    background-image: url('images/insta-red.PNG');
+}
+#git {
+    background-image: url('images/git.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#git:hover {
+    background-image: url('images/git-red.PNG');
+}
+#email {
+    background-image: url('images/mail.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#email:hover {
+    background-image: url('images/red-mail.PNG');
+}
+
+#linkedin {
+    background-image: url('images/linkedIn.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#linkedin:hover {
+    background-image: url('images/red-linkedIn.PNG');
+}
+
+.contact-item:hover {
+    transform: scale(1.2);
+    border-color: #ff0000;
+}
+
+
+
+
+
+body.art .intro {
+    position: fixed;
+    text-align: center;
+    padding: 80px 20px;
+    background: none;
+    width: 100%;
+    z-index: 0;
+}
+
+body.art .intro::before,
+body.art .intro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+body.art .intro::before {
+    background-image: url('images/art-bg.PNG');
+    opacity: 1;
+}
+
+body.art .intro::after {
+    opacity: var(--blur-opacity, 0);
+    backdrop-filter: blur(5px);
+}
+
+body.art .intro h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: none;
+    border: none;
+}
+
+body.art .intro p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    animation: none;
+    opacity: 1;
+}
+
+body.art .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #0071e3;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+body.art .btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+body.art .window{
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+}
+body.art .projects,
+body.art .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+body.art .projects h2,
+body.art .contact h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+body.art .project-item {
+    background-color: #f5f5f7;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.art .project-item img {
+    border-bottom: 1px solid gray;
+}
+
+body.art .project-item a {
+    color: rgb(57, 57, 57);
+ 
+}
+
+body.art .project-item a:hover {
+    color:gray;
+}
+
+body.art .project-item p {
+    color: rgb(60, 60, 60);
+}
+
+body.art .scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+body.art .scroll::-webkit-scrollbar-track {
+    background: #f0f0f5;
+    border-radius: 10px;
+}
+
+body.art .scroll::-webkit-scrollbar-thumb {
+    background-color: #7b7b7bad;
+    border-radius: 25px;
+    border: 3px solid #f0f0f5; 
+}
+
+body.art .scroll::-webkit-scrollbar-thumb:hover {
+    border-radius: 25px;
+    background-color: #404040; 
+}
+
+body.art #contact{
+    margin-top: 0;
+    width: 100%;
+}
+
+body.art .contact-item {
+    border: 2px solid #0071e3;
+    border-radius: 50%;
+}
+
+body.art .contact-item:hover {
+    transform: scale(1.1);
+}
+
+body.art #insta {
+    background-image: url('images/insta-art.png');
+}
+
+body.art #insta:hover {
+    background-image: url('images/insta-art-blur.png');
+}
+
+body.art #git {
+    background-image: url('images/git-art.PNG');
+}
+
+body.art #git:hover {
+    background-image: url('images/git-art-blur.PNG');
+}
+
+body.art #email {
+    background-image: url('images/mail-art.png');
+}
+
+body.art #email:hover {
+    background-image: url('images/blur-mail-art.png');
+}
+
+body.art #linkedin {
+    background-image: url('images/linkedIn-art.PNG');
+}
+
+body.art #linkedin:hover {
+    background-image: url('images/blur-linkedIn-art.PNG');
+}
+
+
+/* Pour les petits écrans (iPhone 14 Pro Max et similaires) */
+@media (max-width: 429px) {
+    .intro h1 {
+        white-space: wrap;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 430px) and (max-width: 659px) {
+    .intro h1 {
+        white-space: wrap;
+        font-size: 2.3rem;
+    }
+}
+/* Pour les écrans moyens (comme les tablettes) */
+@media (min-width: 660px) and (max-width: 768px) {
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 769px) and (max-width: 1049px) {
+    .intro h1 {
+        font-size: 3rem;
+    }
+}
+/* Pour les grands écrans (ordinateurs de bureau) */
+@media (min-width: 1050px) {
+    .intro h1 {
+        font-size: 4rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Accueil</title>
+    <link rel="icon" href="images/app-icon.png" type="image/png">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="alpha.css">
+    <meta name="description" content="Portfolio de Ekketsu, apprenti développeur web. Découvrez mes projets et contactez-moi !">
+    <!--Open Graph -->
+    <meta property="og:title" content="Portfolio de ekketsu">
+    <meta property="og:description" content="Par un passioné de Développement Web, d'Art, et de Cybersécurité.">
+    <meta property="og:image" content="images/Portfolio.png">
+    <meta property="og:url" content="https://votre-site.com">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<script>
+    document.addEventListener('keydown', function(event) {
+
+        if (document.body.classList.contains('art')) {
+        return;
+    }
+
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0 && (selection.toString().length > 0 || selection.anchorNode)) {
+            event.preventDefault();
+    
+            const selectedElement = selection.anchorNode.parentElement;
+    
+            let warningMessage = document.createElement('div');
+            warningMessage.textContent = "Access denied: You must be an administrator";
+            warningMessage.style.position = 'absolute';
+            warningMessage.style.backgroundColor = 'rgba(255, 0, 0, 0.75)';
+            warningMessage.style.color = '#ffffff';
+            warningMessage.style.padding = '5px';
+            warningMessage.style.borderRadius = '5px';
+            warningMessage.style.fontSize = '0.8rem';
+            warningMessage.style.zIndex = '1000';
+    
+            const rect = selectedElement.getBoundingClientRect();
+            
+            warningMessage.style.left = `${rect.left + window.scrollX}px`;
+            warningMessage.style.top = `${rect.bottom + window.scrollY + 10}px`;
+    
+            document.body.appendChild(warningMessage);
+    
+            document.querySelectorAll('.warning-message').forEach(msg => msg.remove());
+    
+            warningMessage.classList.add('warning-message');
+    
+            setTimeout(function() {
+                warningMessage.remove();
+            }, 3000);
+        }
+    });
+    </script>
+    
+
+<body>
+    <header>
+        <nav>
+            <a href="about.html">À propos</a>
+            <a href="#projects">Projets</a>
+            <a href="#contact" id="nav-contact">Contact</a>
+            <div class="theme-dropdown">
+                <button class="theme-button">Thème</button>
+                <div class="theme-menu">
+                    <a href="#old-hack" onclick="changeTheme('hack')">Old Hack</a>
+                    <a href="#art" onclick="changeTheme('artistic')">Art Code</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Par un passioné de Développement Web, d'Art, et de Cybersécurité.</p>
+            <a href="about.html" class="btn">Qui suis-je ?</a>
+        </section>
+<div class="window">
+        <section id="projects" class="projects">
+            <h2>Mes Projets Récents</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <a id="art-project" href="https://ekketsu.github.io/art-code.github.io/index.html" title="Art-code" target="_blank">
+                        <img src="images/art-code.png" alt="Projet 1">
+                        <h3>Art-code</h3>
+                    </a>
+                    <div class="scroll">
+                 <p>Mon premier site web, l'élément déclencheur, marquant le début d'une(certainement) longue série de futurs projets, des plus farfelus et originaux. </p>
+                </div> 
+            </div>
+                <div class="project-item">
+                    <a href="https://github.com/ekketsu/ship-grip" title="ShipGrip" target="_blank">
+                        <img src="images/ShipGrip.png" alt="Projet 2">
+                        <h3>ShipGrip</h3>
+                    </a>
+                    <div class="scroll">
+                    <p>C'est mon premier projet écrit en Python, il  </p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="lien-vers-projet-3" title="Coming Soon" target="_blank">
+                        <img src="images/loading-gif.gif" alt="Projet 3">
+                        <h3>Coming Soon</h3>
+                    </a>
+                    <div class="scroll">
+                    <p>Incoming bangers...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Mes Contacts</h2>
+            <div class="contact-list">
+                <a href="https://www.instagram.com/fvrlan.07" title="Instagram" target="_blank" class="contact-item" id="insta">
+                </a>
+                <a href="https://github.com/ekketsu" title="Github" target="_blank" class="contact-item" id="git">
+                </a>
+                <a href="mailto:ekketsu@duck.com" title="Email" target="_blank" class="contact-item" id="email">
+                </a>
+                <a href="https://www.linkedin.com/in/ekk-dedsan-354066264/" title="LinkedIn" target="_blank" class="contact-item" id="linkedin">
+                </a>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ekketsu. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script JavaScript externe -->
+    <script src="test.js"></script>
+</body>
+</html>
