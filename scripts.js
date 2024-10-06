@@ -1,4 +1,4 @@
-function changeTheme(theme) {
+function changeTheme(theme) { 
     if (theme === 'hack') {
         document.body.classList.add('theme-hack');
         document.body.classList.remove('art');
