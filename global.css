@@ -53,8 +53,8 @@ main {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background: url('images/alien-bg.webp') no-repeat center center fixed;
-    background-size: contain;
+    background: url('images/alien-bg.webp') no-repeat bottom right fixed;
+    background-size: cover;
     padding: 20px;
 }
 
