@@ -248,7 +248,7 @@ body.art .intro::after {
     height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index: -10000;
     transition: opacity 0.5s ease;
 }
 
