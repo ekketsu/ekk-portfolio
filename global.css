@@ -178,15 +178,23 @@ body.art footer {
     header nav a {
         font-size: 0.7rem;
     }
+    .intro {
+        background-size: contain;
+    }
 }
 @media (min-width: 430px) and (max-width: 659px) {
     header nav a {
         font-size: 14px;
     }
+    .intro {
+       background-size: contain; 
+    }
 }
 /* Pour les écrans moyens (comme les tablettes) */
 @media (min-width: 660px) and (max-width: 768px) {
-
+.intro {
+    background-size: contain;
+    }
 }
 @media (min-width: 769px) and (max-width: 1049px) {
 
