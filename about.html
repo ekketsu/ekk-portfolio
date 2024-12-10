@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="about.css">
     <meta name="description" content="Portfolio de Ekketsu, apprenti développeur web. Découvrez mes projets et contactez-moi !">
-    <!-- Open Graph -->
+    <!-- OpenGraph -->
     <meta property="og:title" content="Portfolio de ekketsu">
     <meta property="og:description" content="Par un passioné de Développement Web, d'Art, et de Cybersécurité.">
     <meta property="og:image" content="images/Portfolio.png">
@@ -62,7 +62,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="index.html#projects">Projets</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="index.html#contact" id="nav-contact">Contact</a>
             <div class="theme-dropdown">
                 <button class="theme-button">Thème</button>
                 <div class="theme-menu">
@@ -74,13 +74,46 @@
     </header>
 
     <main>
-<img src="images/loading-gif.gif">
+        <section class="intro">
+            <div class="intro-text">
+                <h1>Être ou ne pas être</h1>
+                <p>Par un novateur infécond</p>
+            </div>
+            <div class="soon">
+
+            </div>
+        </section>
     </main>
+    
     <footer>
         <p>&copy; 2024 Ekketsu. Tous droits réservés.</p>
     </footer>
-
-    <!-- Script JavaScript externe -->
-    <script src="test.js"></script>
 </body>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hiddenElements = document.querySelectorAll('.hidden');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    hiddenElements.forEach(function(element) {
+        observer.observe(element);
+    });
+});
+</script>
+<script src="test.js"></script>
 </html>
