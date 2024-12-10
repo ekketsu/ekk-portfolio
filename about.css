@@ -1,1 +1,62 @@
- 
+body {
+    overflow-x: hidden;
+}
+
+body.art header{
+    background: url('images/art-abstract.PNG') no-repeat center center fixed;
+    background-size: cover;
+    filter:grayscale(1);
+}
+
+.intro {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('images/space.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0px;
+}
+
+body.art .intro{
+    background: url('images/art-abstract.PNG') no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+.intro-text{
+    height: fit-content;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: exclusion;
+}
+
+.intro h1 {
+    font-size: 4rem;
+}
+
+.intro h1:hover {
+}
+
+body.art .intro p{
+    color: #ffffff;
+}
+
+.intro p {
+    mix-blend-mode: exclusion;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.soon{
+    position: absolute;
+    top: 100vh;
+    background-image: url("images/loading-gif.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+} 
