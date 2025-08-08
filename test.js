@@ -1,10 +1,35 @@
+let matrixScriptLoaded = false;
+
+function loadMatrixScript() {
+    if (matrixScriptLoaded) return;
+    const script = document.createElement('script');
+    script.src = 'scripts/matrix.js';
+    script.id = 'matrix-script';
+    document.body.appendChild(script);
+    matrixScriptLoaded = true;
+}
+
+function unloadMatrixScript() {
+    const script = document.getElementById('matrix-script');
+    if (script) {
+        script.remove();
+    }
+    if (window.matrixInterval) {
+        clearInterval(window.matrixInterval);
+        delete window.matrixInterval;
+    }
+    matrixScriptLoaded = false;
+}
+
 function changeTheme(theme) {
     if (theme === 'hack') {
         document.body.classList.add('theme-hack');
         document.body.classList.remove('art');
+        loadMatrixScript();
     } else if (theme === 'artistic') {
         document.body.classList.add('art');
         document.body.classList.remove('theme-hack');
+        unloadMatrixScript();
     }
     localStorage.setItem('selectedTheme', theme);
 }
